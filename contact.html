@@ -1,0 +1,492 @@
+```html id="contact1"
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #4fc3f7,
+        #81d4fa,
+        #fff176
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+
+/* พระอาทิตย์ */
+
+.sun{
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    background:#ffd600;
+
+    border-radius:50%;
+
+    top:40px;
+    right:80px;
+
+    box-shadow:0 0 50px #ffea00;
+
+}
+
+
+
+/* เมฆ */
+
+.cloud{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50px;
+
+    opacity:.8;
+
+}
+
+
+.cloud1{
+
+    width:180px;
+    height:50px;
+
+    top:120px;
+    left:70px;
+
+}
+
+
+.cloud2{
+
+    width:230px;
+    height:60px;
+
+    bottom:100px;
+    right:50px;
+
+}
+
+
+
+/* กล่องหลัก */
+
+.container{
+
+    position:relative;
+
+    z-index:5;
+
+    width:90%;
+
+    max-width:900px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:35px;
+
+    padding:45px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+
+
+h1{
+
+    text-align:center;
+
+    color:#075985;
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+}
+
+
+h1 span{
+
+    color:#eab308;
+
+}
+
+
+
+/* ช่องข้อมูล */
+
+.contact-box{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    border-left:8px solid #facc15;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+}
+
+
+
+.card h2{
+
+    color:#0369a1;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card p{
+
+    color:#164e63;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+/* Social */
+
+.social a{
+
+    display:block;
+
+    text-decoration:none;
+
+    margin:10px 0;
+
+    background:#facc15;
+
+    padding:10px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    color:#075985;
+
+    font-weight:bold;
+
+}
+
+
+
+.social a:hover{
+
+    background:#fde047;
+
+}
+
+
+
+/* ฟอร์ม */
+
+input, textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#e0f2fe;
+
+    outline:none;
+
+}
+
+
+
+textarea{
+
+    height:100px;
+
+}
+
+
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#facc15;
+
+    color:#075985;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#fde047;
+
+}
+
+
+
+/* ปุ่มย้อนกลับ */
+
+.back{
+
+    display:block;
+
+    width:180px;
+
+    margin:30px auto 0;
+
+    text-align:center;
+
+    padding:12px;
+
+    background:#facc15;
+
+    color:#075985;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* ดาว */
+
+.star{
+
+    position:absolute;
+
+    color:white;
+
+    font-size:30px;
+
+}
+
+
+.star1{
+
+    top:20%;
+
+    left:15%;
+
+}
+
+
+.star2{
+
+    bottom:20%;
+
+    right:20%;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="sun"></div>
+
+
+<div class="cloud cloud1"></div>
+
+<div class="cloud cloud2"></div>
+
+
+<div class="star star1">⭐</div>
+
+<div class="star star2">✨</div>
+
+
+
+
+<div class="container">
+
+
+<h1>
+Contact <span>ติดต่อ</span>
+</h1>
+
+
+
+
+<div class="contact-box">
+
+
+
+<div class="card">
+
+
+<h2>📌 Contact Info</h2>
+
+
+<p>
+
+👤 ชื่อ : นางสาวปัญนวรรณ ธานะวาท<br>
+
+📧 Email : pannawan@gmail.com<br>
+
+📱 Phone : 080-576-2862<br>
+
+📍 Location : ประเทศไทย
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card social">
+
+
+<h2>🌐 Social Media</h2>
+
+
+<a href="#">
+💻 GitHub
+</a>
+
+
+<a href="#">
+📘 Facebook
+</a>
+
+
+<a href="#">
+📷 Instagram
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>✉️ Message</h2>
+
+
+<input type="text" placeholder="ชื่อของคุณ">
+
+
+<input type="email" placeholder="Email">
+
+
+<textarea placeholder="ข้อความ"></textarea>
+
+
+<button>
+Send Message
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<a href="activity.html" class="back">
+← Activity
+</a>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
+```
