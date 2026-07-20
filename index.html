@@ -1,15 +1,206 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>Portfolio นางสาวปัญนวรรณ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit', sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#6dd5fa,#ffd54f);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ลูกโป่งน้ำด้านหลัง */
+.bubble{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.25);
+    box-shadow:
+    inset 10px 10px 20px rgba(255,255,255,0.5),
+    0 10px 30px rgba(0,0,0,0.1);
+    animation:float 8s infinite ease-in-out;
+}
+
+.bubble:nth-child(1){
+    width:180px;
+    height:180px;
+    top:10%;
+    left:10%;
+}
+
+.bubble:nth-child(2){
+    width:120px;
+    height:120px;
+    bottom:15%;
+    right:15%;
+    animation-delay:2s;
+}
+
+.bubble:nth-child(3){
+    width:220px;
+    height:220px;
+    top:40%;
+    right:5%;
+    animation-delay:4s;
+}
+
+.bubble:nth-child(4){
+    width:90px;
+    height:90px;
+    bottom:10%;
+    left:25%;
+    animation-delay:1s;
+}
+
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-40px);
+    }
+}
+
+
+/* กล่องเนื้อหา */
+.container{
+    position:relative;
+    z-index:2;
+    background:rgba(255,255,255,0.85);
+    width:90%;
+    max-width:700px;
+    padding:40px;
+    text-align:center;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+.profile{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #ffd54f;
+}
+
+
+h1{
+    margin-top:20px;
+    font-size:42px;
+    color:#1976d2;
+}
+
+h2{
+    color:#f9a825;
+    margin:10px;
+}
+
+p{
+    color:#555;
+    font-size:18px;
+}
+
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    background:#1976d2;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+
+.btn:hover{
+    background:#f9a825;
+    transform:scale(1.05);
+}
+
+
+nav{
+    margin-top:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1976d2;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#f9a825;
+}
+
+</style>
+
 </head>
-<body bgcolor="AFD7F6">
-<h1>หน้าหลัก</h1>
-<p>
-  <a href="profile.html">ประวัติส่วนตัว</a> 
-  <a href="education.html">ประวัติส่วนตัว</a> 
-  <a href="activities.html">ประวัติส่วนตัว</a> 
-  <a href="contact.html">ประวัติส่วนตัว</a> 
-</p>
+
+
+<body>
+
+<!-- ลูกโป่งน้ำ -->
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+
+<div class="container">
+
+    <!-- เปลี่ยนรูปเป็นของตัวเอง -->
+    <img src="images/profile.jpg" class="profile">
+
+    <h1>My Portfolio</h1>
+
+    <h2> ปัญนวรรณ - ธานะวาท
+</h2>
+
+    <p>
+        นักเรียนชั้นมัธยมศึกษาปีที่ 6/3 <br>
+        โรงเรียนพานทองต้นสน<br>
+        สาขา/แผนการเรียน สาย วิทย์ - คณิต
+    </p>
+
+
+    <a href="personal.html" class="btn">
+        เข้าชม Portfolio
+    </a>
+
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="personal.html">Profile</a>
+        <a href="education.html">Education</a>
+        <a href="activity.html">Activity</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+
+</div>
+
+
 </body>
 </html>
+```
