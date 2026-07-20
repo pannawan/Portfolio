@@ -1,4 +1,4 @@
-```html id="contact1"
+```html
 <!DOCTYPE html>
 <html lang="th">
 
@@ -16,7 +16,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:"Arial",sans-serif;
 }
 
 
@@ -25,136 +25,195 @@ body{
     min-height:100vh;
 
     background:linear-gradient(
-        180deg,
-        #4fc3f7,
-        #81d4fa,
-        #fff176
+        135deg,
+        #38bdf8,
+        #60a5fa,
+        #fde047
     );
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    overflow:hidden;
 
 }
 
 
 
-/* พระอาทิตย์ */
+/* ลูกโป่งน้ำ */
 
-.sun{
+.bubble{
 
-    position:absolute;
+    position:fixed;
 
-    width:150px;
-    height:150px;
+    bottom:-120px;
 
-    background:#ffd600;
+    background:rgba(255,255,255,0.35);
 
     border-radius:50%;
 
-    top:40px;
-    right:80px;
-
-    box-shadow:0 0 50px #ffea00;
+    animation:float 12s infinite;
 
 }
 
 
 
-/* เมฆ */
+@keyframes float{
 
-.cloud{
-
-    position:absolute;
-
-    background:white;
-
-    border-radius:50px;
-
-    opacity:.8;
-
-}
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
 
 
-.cloud1{
+    20%{
+        opacity:1;
+    }
 
-    width:180px;
-    height:50px;
 
-    top:120px;
-    left:70px;
+    100%{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
 
 }
 
 
-.cloud2{
 
-    width:230px;
-    height:60px;
+.b1{
+    width:80px;
+    height:80px;
+    left:15%;
+}
 
-    bottom:100px;
-    right:50px;
+
+
+.b2{
+    width:130px;
+    height:130px;
+    left:45%;
+    animation-duration:15s;
+}
+
+
+
+.b3{
+    width:100px;
+    height:100px;
+    left:80%;
+    animation-duration:10s;
+}
+
+
+
+
+
+
+
+/* เมนู */
+
+
+nav{
+
+    text-align:center;
+
+    padding:25px;
 
 }
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#2563eb;
+
+    padding:12px 18px;
+
+    margin:5px;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    background:#facc15;
+
+    color:#1e3a8a;
+
+}
+
+
+
+
 
 
 
 /* กล่องหลัก */
 
+
 .container{
 
-    position:relative;
-
-    z-index:5;
-
-    width:90%;
+    width:85%;
 
     max-width:900px;
 
-    background:rgba(255,255,255,.45);
+    margin:auto;
 
-    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.9);
 
-    border-radius:35px;
+    padding:40px;
 
-    padding:45px;
+    border-radius:30px;
 
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
 
 }
 
 
 
+
 h1{
 
-    text-align:center;
-
-    color:#075985;
+    color:#2563eb;
 
     font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.subtitle{
+
+    color:#475569;
 
     margin-bottom:30px;
 
 }
 
 
-h1 span{
-
-    color:#eab308;
-
-}
 
 
 
-/* ช่องข้อมูล */
+
+/* Contact Card */
+
 
 .contact-box{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
     gap:20px;
 
@@ -164,15 +223,31 @@ h1 span{
 
 .card{
 
-    background:white;
+    background:#eff6ff;
 
     padding:25px;
 
-    border-radius:25px;
+    border-radius:20px;
 
-    border-left:8px solid #facc15;
+    transition:.3s;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    background:#dbeafe;
+
+}
+
+
+
+.icon{
+
+    font-size:45px;
 
 }
 
@@ -180,9 +255,9 @@ h1 span{
 
 .card h2{
 
-    color:#0369a1;
+    color:#eab308;
 
-    margin-bottom:15px;
+    margin:15px;
 
 }
 
@@ -190,169 +265,55 @@ h1 span{
 
 .card p{
 
-    color:#164e63;
-
-    font-size:17px;
-
-    line-height:1.8;
+    color:#334155;
 
 }
 
 
 
-/* Social */
 
-.social a{
+.card a{
 
-    display:block;
+    display:inline-block;
 
-    text-decoration:none;
+    margin-top:15px;
 
-    margin:10px 0;
+    padding:10px 20px;
 
-    background:#facc15;
-
-    padding:10px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    color:#075985;
-
-    font-weight:bold;
-
-}
-
-
-
-.social a:hover{
-
-    background:#fde047;
-
-}
-
-
-
-/* ฟอร์ม */
-
-input, textarea{
-
-    width:100%;
-
-    padding:12px;
-
-    margin-bottom:15px;
-
-    border:none;
-
-    border-radius:15px;
-
-    background:#e0f2fe;
-
-    outline:none;
-
-}
-
-
-
-textarea{
-
-    height:100px;
-
-}
-
-
-
-button{
-
-    width:100%;
-
-    padding:12px;
-
-    border:none;
-
-    border-radius:25px;
-
-    background:#facc15;
-
-    color:#075985;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-}
-
-
-
-button:hover{
-
-    background:#fde047;
-
-}
-
-
-
-/* ปุ่มย้อนกลับ */
-
-.back{
-
-    display:block;
-
-    width:180px;
-
-    margin:30px auto 0;
-
-    text-align:center;
-
-    padding:12px;
-
-    background:#facc15;
-
-    color:#075985;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-    font-weight:bold;
-
-}
-
-
-
-/* ดาว */
-
-.star{
-
-    position:absolute;
+    background:#2563eb;
 
     color:white;
 
-    font-size:30px;
+    text-decoration:none;
+
+    border-radius:25px;
 
 }
 
 
-.star1{
 
-    top:20%;
+.card a:hover{
 
-    left:15%;
+    background:#facc15;
+
+    color:#1e3a8a;
+
+}
+
+
+
+
+
+
+
+.footer{
+
+    margin-top:30px;
+
+    color:#64748b;
 
 }
 
-
-.star2{
-
-    bottom:20%;
-
-    right:20%;
-
-}
 
 
 </style>
@@ -365,17 +326,37 @@ button:hover{
 <body>
 
 
-<div class="sun"></div>
+<!-- ลูกโป่ง -->
+
+<div class="bubble b1"></div>
+
+<div class="bubble b2"></div>
+
+<div class="bubble b3"></div>
 
 
-<div class="cloud cloud1"></div>
-
-<div class="cloud cloud2"></div>
 
 
-<div class="star star1">⭐</div>
 
-<div class="star star2">✨</div>
+
+<!-- Menu -->
+
+<nav>
+
+
+<a href="index.html">Home</a>
+
+<a href="personal.html">Personal</a>
+
+<a href="education.html">Education</a>
+
+<a href="activity.html">Activity</a>
+
+<a href="contact.html">Contact</a>
+
+
+</nav>
+
 
 
 
@@ -384,8 +365,14 @@ button:hover{
 
 
 <h1>
-Contact <span>ติดต่อ</span>
+📩 Contact Me
 </h1>
+
+
+<p class="subtitle">
+ช่องทางการติดต่อและติดตามผลงาน
+</p>
+
 
 
 
@@ -394,23 +381,26 @@ Contact <span>ติดต่อ</span>
 
 
 
+
+
 <div class="card">
 
+<div class="icon">
+📧
+</div>
 
-<h2>📌 Contact Info</h2>
+
+<h2>Email</h2>
 
 
 <p>
-
-👤 ชื่อ : นางสาวปัญนวรรณ ธานะวาท<br>
-
-📧 Email : pannawan@gmail.com<br>
-
-📱 Phone : 080-576-2862<br>
-
-📍 Location : ประเทศไทย
-
+Pannawan08@gmail.com
 </p>
+
+
+<a href="mailto:youremail@gmail.com">
+ส่งอีเมล
+</a>
 
 
 </div>
@@ -419,24 +409,52 @@ Contact <span>ติดต่อ</span>
 
 
 
-<div class="card social">
+
+<div class="card">
+
+<div class="icon">
+💻
+</div>
 
 
-<h2>🌐 Social Media</h2>
+<h2>GitHub</h2>
 
 
-<a href="#">
-💻 GitHub
+<p>
+github.com/username
+</p>
+
+
+<a href="https://github.com/" target="_blank">
+ดูผลงาน
 </a>
 
 
-<a href="#">
-📘 Facebook
-</a>
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+<div class="icon">
+📘
+</div>
+
+
+<h2>Facebook</h2>
+
+
+<p>
+ชื่อ Pannawan
+</p>
 
 
 <a href="#">
-📷 Instagram
+เข้าสู่ Facebook
 </a>
 
 
@@ -448,37 +466,43 @@ Contact <span>ติดต่อ</span>
 
 <div class="card">
 
-
-<h2>✉️ Message</h2>
-
-
-<input type="text" placeholder="ชื่อของคุณ">
-
-
-<input type="email" placeholder="Email">
-
-
-<textarea placeholder="ข้อความ"></textarea>
-
-
-<button>
-Send Message
-</button>
-
-
+<div class="icon">
+📱
 </div>
 
 
+<h2>Phone</h2>
 
 
-</div>
+<p>
+08x-xxx-xxxx
+</p>
 
 
-
-
-<a href="activity.html" class="back">
-← Activity
+<a href="tel:080-576-2862">
+โทรหา
 </a>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<div class="footer">
+
+<p>
+Thank you for visiting my Portfolio 💙💛
+</p>
+
+</div>
+
 
 
 
