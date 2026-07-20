@@ -1,0 +1,428 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Education</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #4fc3f7,
+        #81d4fa,
+        #fff176
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+
+/* พระอาทิตย์ */
+
+.sun{
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    background:#ffd600;
+
+    border-radius:50%;
+
+    top:40px;
+    right:80px;
+
+    box-shadow:0 0 50px #ffea00;
+
+}
+
+
+
+/* เมฆ */
+
+.cloud{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50px;
+
+    opacity:0.8;
+
+}
+
+
+.cloud1{
+
+    width:180px;
+    height:50px;
+
+    top:120px;
+    left:70px;
+
+}
+
+
+.cloud2{
+
+    width:220px;
+    height:60px;
+
+    bottom:100px;
+    right:50px;
+
+}
+
+
+
+/* กล่องหลัก */
+
+.container{
+
+    position:relative;
+
+    z-index:5;
+
+    width:90%;
+
+    max-width:900px;
+
+    background:rgba(255,255,255,0.45);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:35px;
+
+    padding:45px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+
+
+h1{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:#075985;
+
+    margin-bottom:35px;
+
+}
+
+
+h1 span{
+
+    color:#eab308;
+
+}
+
+
+
+/* Timeline */
+
+.timeline{
+
+    position:relative;
+
+    margin-left:30px;
+
+    border-left:5px solid #facc15;
+
+}
+
+
+
+.box{
+
+    background:white;
+
+    margin:25px 0;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    position:relative;
+
+    margin-left:35px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+
+}
+
+
+
+.box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:25px;
+
+    height:25px;
+
+    background:#facc15;
+
+    border-radius:50%;
+
+    left:-50px;
+
+    top:25px;
+
+    border:5px solid white;
+
+}
+
+
+
+.box h2{
+
+    color:#0369a1;
+
+    margin-bottom:10px;
+
+}
+
+
+.box p{
+
+    color:#164e63;
+
+    font-size:17px;
+
+}
+
+
+
+/* Skills */
+
+.skills{
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+.skill{
+
+    background:#facc15;
+
+    color:#075985;
+
+    padding:10px 20px;
+
+    border-radius:25px;
+
+    font-weight:bold;
+
+}
+
+
+
+.back{
+
+    display:block;
+
+    width:160px;
+
+    margin:30px auto 0;
+
+    padding:12px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:#facc15;
+
+    color:#075985;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+
+.back:hover{
+
+    background:#fde047;
+
+}
+
+
+/* ดาว */
+
+.star{
+
+    position:absolute;
+
+    color:white;
+
+    font-size:30px;
+
+}
+
+
+.star1{
+    top:20%;
+    left:15%;
+}
+
+
+.star2{
+    bottom:20%;
+    right:20%;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="sun"></div>
+
+<div class="cloud cloud1"></div>
+
+<div class="cloud cloud2"></div>
+
+
+<div class="star star1">⭐</div>
+
+<div class="star star2">✨</div>
+
+
+
+<div class="container">
+
+
+<h1>
+Education <span>ประวัติการศึกษา</span>
+</h1>
+
+
+
+<div class="timeline">
+
+
+<div class="box">
+
+<h2>📘 ระดับประถมศึกษา</h2>
+
+<p>
+ปีการศึกษา : 2558 - 2563<br>
+โรงเรียน :  โรงเรีบนวัดเซิดสำราญ(บ้านเซิดวิทยาคาร)<br>
+รายละเอียด : ศึกษาระดับประถมศึกษา
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h2>📗 ระดับมัธยมศึกษาตอนต้น</h2>
+
+<p>
+ปีการศึกษา : 2564 - 2567<br>
+โรงเรียน : พานทองต้นสน<br>
+รายละเอียด : ศึกษาระดับมัธยมศึกษาตอนต้น
+</p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>📙 ระดับมัธยมศึกษาตอนปลาย</h2>
+
+<p>
+ปีการศึกษา : 2569 - ปัจจุบัน<br>
+โรงเรียน : พานทอง<br>
+ระดับชั้น : มัธยมศึกษาปีที่ 6
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+<h2 style="text-align:center;color:#075985;margin-top:25px;">
+💻 Skills
+</h2>
+
+
+<div class="skills">
+
+<div class="skill">กระบวนการวิทย์</div>
+
+<div class="skill">คำนวณเเละสถิติ</div>
+
+<div class="skill">บวก ลบ คูณ หาร</div>
+
+<div class="skill">การสื่อสาร</div>
+
+<div class="skill">GitHub</div>
+
+</div>
+
+
+
+<a href="personal.html" class="back">
+← Personal
+</a>
+
+
+</div>
+
+
+
+</body>
+</html>
+```
