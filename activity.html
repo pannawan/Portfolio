@@ -1,0 +1,472 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Activity</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #4fc3f7,
+        #81d4fa,
+        #fff176
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:auto;
+
+}
+
+
+/* พระอาทิตย์ */
+
+.sun{
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    background:#ffd600;
+
+    border-radius:50%;
+
+    top:40px;
+    right:80px;
+
+    box-shadow:0 0 50px #ffea00;
+
+}
+
+
+
+/* เมฆ */
+
+.cloud{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50px;
+
+    opacity:.8;
+
+}
+
+
+.cloud1{
+
+    width:180px;
+    height:50px;
+
+    top:120px;
+    left:60px;
+
+}
+
+
+.cloud2{
+
+    width:220px;
+    height:60px;
+
+    bottom:80px;
+    right:40px;
+
+}
+
+
+
+/* กล่อง */
+
+.container{
+
+    position:relative;
+
+    z-index:5;
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:50px 0;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:35px;
+
+    padding:40px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+
+
+h1{
+
+    text-align:center;
+
+    color:#075985;
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+}
+
+
+h1 span{
+
+    color:#eab308;
+
+}
+
+
+
+/* กิจกรรม */
+
+.activity{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    border-top:8px solid #facc15;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+}
+
+
+
+.card h2{
+
+    color:#0369a1;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.card p{
+
+    color:#164e63;
+
+    line-height:1.6;
+
+}
+
+
+
+/* เกียรติบัตร */
+
+.certificate{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.cert{
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+}
+
+
+
+.cert img{
+
+    width:100%;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+
+.cert h3{
+
+    color:#075985;
+
+    margin-top:10px;
+
+}
+
+
+
+/* ปุ่ม */
+
+.back{
+
+    display:block;
+
+    width:180px;
+
+    margin:35px auto 0;
+
+    text-align:center;
+
+    padding:12px;
+
+    text-decoration:none;
+
+    background:#facc15;
+
+    color:#075985;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+
+.back:hover{
+
+    background:#fde047;
+
+}
+
+
+
+/* ดาว */
+
+.star{
+
+    position:absolute;
+
+    color:white;
+
+    font-size:30px;
+
+}
+
+
+.star1{
+
+    top:20%;
+
+    left:15%;
+
+}
+
+
+.star2{
+
+    bottom:20%;
+
+    right:20%;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="sun"></div>
+
+
+<div class="cloud cloud1"></div>
+
+<div class="cloud cloud2"></div>
+
+
+<div class="star star1">⭐</div>
+
+<div class="star star2">✨</div>
+
+
+
+<div class="container">
+
+
+<h1>
+Activity <span>& Certificate</span>
+</h1>
+
+
+
+<h2 style="color:#075985;margin-bottom:20px;">
+🎯 กิจกรรมที่เข้าร่วม
+</h2>
+
+
+
+<div class="activity">
+
+
+<div class="card">
+
+<h2>💻 Web Development</h2>
+
+<p>
+เข้าร่วมการพัฒนาเว็บไซต์
+ฝึกการใช้งาน HTML CSS
+และการออกแบบเว็บไซต์
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🏆 การแข่งขัน</h2>
+
+<p>
+เข้าร่วมการแข่งขันด้านเทคโนโลยี
+และพัฒนาทักษะการแก้ปัญหา
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🤝 จิตอาสา</h2>
+
+<p>
+ร่วมกิจกรรมช่วยเหลือโรงเรียน
+และทำประโยชน์เพื่อสังคม
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<h2 style="color:#075985;margin-top:35px;">
+📜 เกียรติบัตร
+</h2>
+
+
+
+<div class="certificate">
+
+
+<div class="cert">
+
+<img src="images/certificate1.jpg">
+
+<h3>
+Certificate 1
+</h3>
+
+</div>
+
+
+
+<div class="cert">
+
+<img src="images/certificate2.jpg">
+
+<h3>
+Certificate 2
+</h3>
+
+</div>
+
+
+
+<div class="cert">
+
+<img src="images/certificate3.jpg">
+
+<h3>
+Certificate 3
+</h3>
+
+</div>
+
+
+
+</div>
+
+
+
+<a href="education.html" class="back">
+← Education
+</a>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
+```
