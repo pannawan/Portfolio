@@ -9,224 +9,256 @@
 
 <style>
 
-font-family:Arial, sans-serif;
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Kanit',sans-serif;
+    font-family:Arial, sans-serif;
 }
+
 
 body{
+
     min-height:100vh;
-    background:linear-gradient(135deg,#6dd5fa,#ffd54f);
-    padding:40px 20px;
-    overflow-x:hidden;
+
+    background:linear-gradient(
+        180deg,
+        #4fc3f7,
+        #81d4fa,
+        #fff176
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
 }
 
 
-/* ลูกโป่งน้ำ */
 
-.bubble{
+/* พระอาทิตย์ */
+
+.sun{
+
     position:absolute;
+
+    width:150px;
+    height:150px;
+
+    background:#ffd600;
+
     border-radius:50%;
-    background:rgba(255,255,255,0.25);
-    box-shadow:
-    inset 10px 10px 20px rgba(255,255,255,.5),
-    0 10px 30px rgba(0,0,0,.1);
 
-    animation:float 7s infinite ease-in-out;
+    top:40px;
+    right:80px;
+
+    box-shadow:0 0 50px #ffea00;
+
 }
 
 
-.bubble:nth-child(1){
+
+/* เมฆ */
+
+.cloud{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50px;
+
+    opacity:0.8;
+
+}
+
+
+.cloud1{
+
     width:180px;
-    height:180px;
-    top:5%;
-    left:5%;
+    height:50px;
+
+    top:120px;
+    left:60px;
+
 }
 
-.bubble:nth-child(2){
-    width:120px;
-    height:120px;
-    right:10%;
-    bottom:10%;
-    animation-delay:2s;
-}
 
-.bubble:nth-child(3){
+.cloud2{
+
     width:230px;
-    height:230px;
-    right:-50px;
-    top:30%;
-    animation-delay:4s;
-}
+    height:60px;
 
-
-@keyframes float{
-
-    50%{
-        transform:translateY(-40px);
-    }
+    bottom:100px;
+    right:50px;
 
 }
 
 
-/* เนื้อหา */
+
+/* กล่องข้อมูล */
 
 .container{
 
     position:relative;
-    z-index:2;
+
+    z-index:5;
+
+    width:90%;
 
     max-width:900px;
-    margin:auto;
 
-    background:rgba(255,255,255,.9);
+    background:rgba(255,255,255,0.45);
 
-    padding:40px;
+    backdrop-filter:blur(10px);
 
-    border-radius:30px;
+    border-radius:35px;
 
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    padding:45px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
 
 }
+
 
 
 h1{
 
     text-align:center;
 
-    color:#1976d2;
+    color:#075985;
 
     font-size:40px;
 
-}
-
-
-h2{
-
-    color:#f9a825;
-
-    margin-top:30px;
+    margin-bottom:30px;
 
 }
 
 
-.profile-box{
+h1 span{
 
-    display:flex;
-
-    align-items:center;
-
-    gap:30px;
-
-    margin-top:30px;
+    color:#eab308;
 
 }
 
 
-.profile-box img{
 
-    width:180px;
-
-    height:180px;
-
-    object-fit:cover;
-
-    border-radius:50%;
-
-    border:6px solid #ffd54f;
-
-}
-
+/* ข้อมูล */
 
 .info{
 
-    font-size:18px;
+    display:grid;
 
-    color:#555;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-    line-height:2;
+    gap:20px;
 
 }
+
 
 
 .card{
 
-    background:#e3f2fd;
+    background:white;
 
     padding:20px;
 
     border-radius:20px;
 
-    margin-top:15px;
+    border-left:8px solid #facc15;
 
-    border-left:8px solid #1976d2;
+    color:#164e63;
 
-}
-
-
-.skill span{
-
-    display:inline-block;
-
-    background:#1976d2;
-
-    color:white;
-
-    padding:8px 18px;
-
-    margin:5px;
-
-    border-radius:20px;
+    box-shadow:0 8px 15px rgba(0,0,0,0.1);
 
 }
 
 
-/* เมนู */
 
-nav{
+.card h2{
+
+    color:#0369a1;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.card p{
+
+    font-size:17px;
+
+}
+
+
+
+.back{
+
+    display:block;
+
+    width:160px;
+
+    margin:35px auto 0;
 
     text-align:center;
 
-    margin-top:30px;
+    padding:12px;
 
-}
+    background:#facc15;
 
-
-nav a{
+    color:#075985;
 
     text-decoration:none;
 
-    color:#1976d2;
+    border-radius:30px;
 
     font-weight:bold;
 
-    margin:0 10px;
+}
+
+
+
+.back:hover{
+
+    background:#fde047;
 
 }
 
 
-nav a:hover{
 
-    color:#f9a825;
+/* ดาว */
+
+.star{
+
+    position:absolute;
+
+    color:white;
+
+    font-size:30px;
+
+}
+
+
+.star1{
+
+    top:20%;
+    left:15%;
 
 }
 
 
-@media(max-width:700px){
+.star2{
 
-.profile-box{
-
-    flex-direction:column;
-
-    text-align:center;
+    bottom:20%;
+    right:20%;
 
 }
 
-}
 
 </style>
 
@@ -236,9 +268,17 @@ nav a:hover{
 <body>
 
 
-<div class="bubble"></div>
-<div class="bubble"></div>
-<div class="bubble"></div>
+<div class="sun"></div>
+
+
+<div class="cloud cloud1"></div>
+
+<div class="cloud cloud2"></div>
+
+
+<div class="star star1">⭐</div>
+
+<div class="star star2">✨</div>
 
 
 
@@ -246,107 +286,79 @@ nav a:hover{
 
 
 <h1>
-Personal Information
+Personal <span>Information</span>
 </h1>
-
-
-
-<div class="profile-box">
-
-
-<img src="images/profile.jpg">
 
 
 
 <div class="info">
 
-<b>ชื่อ - นามสกุล :</b> นางสาวปัญนวรรณ ธานะวาท
-<br>
-
-<b>ชื่อเล่น :</b> พริกไทย<br>
-
-<b>วันเกิด :</b> 6 ธันวาคม 2551<br>
-
-<b>อายุ :</b> 17 ปี<br>
-
-<b>โรงเรียน :</b> พานทอง <br>
-
-<b> แผนการเรียน :</b> วิทย์ - คณิต <br>
-
-<b>ที่อยู่ :</b> .........................<br>
-
-
-</div>
-
-
-</div>
-
-
-
-<h2>About Me</h2>
 
 <div class="card">
 
-ฮันเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 6 
-มีความสนใจด้านเทคโนโลยี การเขียนเว็บไซต์ 
-และการพัฒนาทักษะด้านการเขียนโปรแกรม 
-พร้อมเรียนรู้สิ่งใหม่ ๆ อยู่เสมอ
+<h2>👤 ข้อมูลส่วนตัว</h2>
+
+<p>
+ชื่อ : นางสาวปัญนวรรณ ธานะวาท<br>
+ชื่อเล่น : พริกไทย<br>
+อายุ : 17 ปี<br>
+วันเกิด : 6 ธันวาคม 2551 </p>
 
 </div>
 
 
-
-<h2>My Skills</h2>
-
-<div class="card skill">
-
-<span>กระบวนการวิทย์</span>
-
-<span>คำนวณเเละสถิติ</span>
-
-<span>บวก ลบ คูณ หาร</span>
-
-<span>GitHub</span>
-
-<span>การสื่อสาร</span>
-
-
-</div>
-
-
-
-
-<h2>My Hobby</h2>
 
 <div class="card">
 
+<h2>🏫 โรงเรียน</h2>
+
+<p>
+โรงเรียน :พานทองต้นสน <br>
+ระดับชั้น : มัธยมศึกษาปีที่ 6/3<br>
+แผนการเรียน : วิทย์ - คณิต
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>⭐ ความสนใจ</h2>
+
+<p>
 - ทำอาหาร<br>
-
 - ดูหนัง<br>
-
 - ฟังเพลง<br>
+- วาดรูป
+</p>
 
-- วาดรูป<br>
+</div>
+
+
+
+
+<div class="card">
+
+<h2>🎯 เป้าหมาย</h2>
+
+<p>
+ต้องการศึกษาต่อด้าน ครุศาสตร์ <br>
+และพัฒนาทักษะด้านเทคโนโลยี
+</p>
+
+</div>
 
 
 </div>
 
 
 
-<nav>
+<a href="index.html" class="back">
+← Home
+</a>
 
-<a href="index.html">Home</a>
-
-<a href="personal.html">Personal</a>
-
-<a href="education.html">Education</a>
-
-<a href="activity.html">Activity</a>
-
-<a href="contact.html">Contact</a>
-
-
-</nav>
 
 
 </div>
