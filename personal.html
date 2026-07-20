@@ -1,11 +1,14 @@
 ```html
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Personal Information</title>
+
 
 <style>
 
@@ -13,88 +16,123 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:"Arial",sans-serif;
 }
 
 
 body{
 
     min-height:100vh;
-
     background:linear-gradient(
-        180deg,
-        #4fc3f7,
-        #81d4fa,
-        #fff176
+        135deg,
+        #38bdf8,
+        #60a5fa,
+        #fde047
     );
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    overflow:hidden;
+    overflow-x:hidden;
 
 }
 
 
+/* ลูกโป่งน้ำ */
 
-/* พระอาทิตย์ */
-
-.sun{
+.bubble{
 
     position:absolute;
+    bottom:-120px;
+    background:rgba(255,255,255,0.35);
+    border-radius:50%;
+    animation:float 12s infinite;
 
+}
+
+
+@keyframes float{
+
+    from{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+
+.b1{
+    width:70px;
+    height:70px;
+    left:10%;
+    animation-duration:10s;
+}
+
+
+.b2{
+    width:120px;
+    height:120px;
+    left:35%;
+    animation-duration:15s;
+}
+
+
+.b3{
+    width:90px;
+    height:90px;
+    left:70%;
+    animation-duration:12s;
+}
+
+
+.b4{
     width:150px;
     height:150px;
-
-    background:#ffd600;
-
-    border-radius:50%;
-
-    top:40px;
-    right:80px;
-
-    box-shadow:0 0 50px #ffea00;
-
+    left:85%;
+    animation-duration:18s;
 }
 
 
 
-/* เมฆ */
 
-.cloud{
+/* เมนู */
 
-    position:absolute;
+nav{
 
-    background:white;
-
-    border-radius:50px;
-
-    opacity:0.8;
+    text-align:center;
+    padding:25px;
+    position:relative;
+    z-index:2;
 
 }
 
 
-.cloud1{
+nav a{
 
-    width:180px;
-    height:50px;
+    text-decoration:none;
+    color:white;
+    background:#2563eb;
+    padding:12px 18px;
+    margin:5px;
+    border-radius:25px;
+    transition:0.3s;
 
-    top:120px;
-    left:60px;
+}
+
+
+nav a:hover{
+
+    background:#facc15;
+    color:#1e3a8a;
 
 }
 
-
-.cloud2{
-
-    width:230px;
-    height:60px;
-
-    bottom:100px;
-    right:50px;
-
-}
 
 
 
@@ -102,25 +140,43 @@ body{
 
 .container{
 
-    position:relative;
-
-    z-index:5;
-
-    width:90%;
-
+    width:80%;
     max-width:900px;
+    margin:auto;
 
-    background:rgba(255,255,255,0.45);
+    background:rgba(255,255,255,0.85);
 
-    backdrop-filter:blur(10px);
+    padding:40px;
 
-    border-radius:35px;
+    border-radius:30px;
 
-    padding:45px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.2);
 
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    position:relative;
+    z-index:1;
 
 }
+
+
+
+.profile{
+
+    width:180px;
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:7px solid #facc15;
+
+    display:block;
+
+    margin:auto;
+
+}
+
 
 
 
@@ -128,136 +184,77 @@ h1{
 
     text-align:center;
 
-    color:#075985;
+    color:#2563eb;
+
+    margin:20px;
 
     font-size:40px;
 
-    margin-bottom:30px;
-
 }
 
 
-h1 span{
+
+h2{
 
     color:#eab308;
 
+    margin-top:25px;
+
 }
 
 
-
-/* ข้อมูล */
 
 .info{
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:20px;
-
-}
-
-
-
-.card{
-
-    background:white;
+    background:#eff6ff;
 
     padding:20px;
 
     border-radius:20px;
 
-    border-left:8px solid #facc15;
-
-    color:#164e63;
-
-    box-shadow:0 8px 15px rgba(0,0,0,0.1);
+    margin-top:15px;
 
 }
 
 
 
-.card h2{
+.info p{
 
-    color:#0369a1;
+    font-size:18px;
 
-    font-size:22px;
+    color:#334155;
 
-    margin-bottom:10px;
-
-}
-
-
-
-.card p{
-
-    font-size:17px;
+    line-height:1.8;
 
 }
 
 
 
-.back{
+.skill{
 
-    display:block;
+    display:flex;
 
-    width:160px;
+    flex-wrap:wrap;
 
-    margin:35px auto 0;
-
-    text-align:center;
-
-    padding:12px;
-
-    background:#facc15;
-
-    color:#075985;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-    font-weight:bold;
+    gap:10px;
 
 }
 
 
 
-.back:hover{
+.skill span{
 
-    background:#fde047;
-
-}
-
-
-
-/* ดาว */
-
-.star{
-
-    position:absolute;
+    background:#2563eb;
 
     color:white;
 
-    font-size:30px;
+    padding:10px 20px;
+
+    border-radius:30px;
 
 }
 
 
-.star1{
-
-    top:20%;
-    left:15%;
-
-}
-
-
-.star2{
-
-    bottom:20%;
-    right:20%;
-
-}
 
 
 </style>
@@ -268,25 +265,44 @@ h1 span{
 <body>
 
 
-<div class="sun"></div>
+
+<!-- ลูกโป่ง -->
+
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+<div class="bubble b4"></div>
 
 
-<div class="cloud cloud1"></div>
-
-<div class="cloud cloud2"></div>
 
 
-<div class="star star1">⭐</div>
+<!-- Navigation -->
 
-<div class="star star2">✨</div>
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="personal.html">Personal</a>
+
+<a href="education.html">Education</a>
+
+<a href="activity.html">Activity</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
 
 
 
 <div class="container">
 
 
+<img src="images/profile.jpg" class="profile">
+
+
 <h1>
-Personal <span>Information</span>
+Personal Information
 </h1>
 
 
@@ -294,19 +310,27 @@ Personal <span>Information</span>
 <div class="info">
 
 
-<div class="card">
-
 <h2>👤 ข้อมูลส่วนตัว</h2>
 
+
 <p>
-ชื่อ : นางสาวปัญนวรรณ ธานะวาท<br>
-ชื่อเล่น : พริกไทย<br>
-อายุ : 17 ปี<br>
-วันเกิด : 6 ธันวาคม 2551 </p>
-
-</div>
+<b>ชื่อ-นามสกุล:</b> นางสาวปัญนวรรณ ธานะวาท
+</p>
 
 
+<p>
+<b>ชื่อเล่น:</b> พริกไทย
+</p>
+
+
+<p>
+<b>วันเกิด:</b> 6 ธันวาคม 2551
+</p>
+
+
+<p>
+<b>อายุ:</b> 17 ปี
+</p>
 
 <div class="card">
 
@@ -323,9 +347,11 @@ Personal <span>Information</span>
 
 
 
-<div class="card">
 
-<h2>⭐ ความสนใจ</h2>
+<div class="info">
+
+
+<h2>🎯 ความสนใจ</h2>
 
 <p>
 - ทำอาหาร<br>
@@ -339,25 +365,31 @@ Personal <span>Information</span>
 
 
 
-<div class="card">
 
-<h2>🎯 เป้าหมาย</h2>
+<div class="info">
 
-<p>
-ต้องการศึกษาต่อด้าน ครุศาสตร์ <br>
-และพัฒนาทักษะด้านเทคโนโลยี
-</p>
+
+<h2>💻 Skills</h2>
+
+
+<div class="skill">
+
+<span>กระบวนการวิทย์</span>
+
+<span>คำนวณเเละสถิติ</span>
+
+<span>บวก ลบ คูณ หาร</span>
+
+<span>การสื่อสาร</span>
+
+<span>GitHub</span>
+
 
 </div>
 
 
 </div>
 
-
-
-<a href="index.html" class="back">
-← Home
-</a>
 
 
 
@@ -366,5 +398,6 @@ Personal <span>Information</span>
 
 
 </body>
+
 </html>
 ```
