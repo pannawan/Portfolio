@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
 
 <meta charset="UTF-8">
@@ -8,13 +9,14 @@
 
 <title>Education</title>
 
+
 <style>
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:"Arial",sans-serif;
 }
 
 
@@ -23,105 +25,152 @@ body{
     min-height:100vh;
 
     background:linear-gradient(
-        180deg,
-        #4fc3f7,
-        #81d4fa,
-        #fff176
+        135deg,
+        #38bdf8,
+        #60a5fa,
+        #fde047
     );
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    overflow:hidden;
 
 }
 
 
 
-/* พระอาทิตย์ */
+/* ลูกโป่ง */
 
-.sun{
+.bubble{
 
-    position:absolute;
+    position:fixed;
+    bottom:-120px;
 
-    width:150px;
-    height:150px;
-
-    background:#ffd600;
+    background:rgba(255,255,255,0.35);
 
     border-radius:50%;
 
-    top:40px;
-    right:80px;
-
-    box-shadow:0 0 50px #ffea00;
+    animation:float 12s infinite;
 
 }
 
 
 
-/* เมฆ */
+@keyframes float{
 
-.cloud{
-
-    position:absolute;
-
-    background:white;
-
-    border-radius:50px;
-
-    opacity:0.8;
-
-}
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
 
 
-.cloud1{
+    20%{
+        opacity:1;
+    }
 
-    width:180px;
-    height:50px;
 
-    top:120px;
-    left:70px;
+    100%{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
 
 }
 
 
-.cloud2{
 
-    width:220px;
-    height:60px;
+.b1{
+    width:80px;
+    height:80px;
+    left:10%;
+    animation-duration:10s;
+}
 
-    bottom:100px;
-    right:50px;
+
+.b2{
+    width:130px;
+    height:130px;
+    left:40%;
+    animation-duration:15s;
+}
+
+
+.b3{
+    width:100px;
+    height:100px;
+    left:75%;
+    animation-duration:12s;
+}
+
+
+
+
+
+/* Menu */
+
+
+nav{
+
+    text-align:center;
+
+    padding:25px;
 
 }
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    background:#2563eb;
+
+    padding:12px 18px;
+
+    margin:5px;
+
+    border-radius:30px;
+
+    transition:0.3s;
+
+}
+
+
+
+nav a:hover{
+
+    background:#facc15;
+
+    color:#1e3a8a;
+
+}
+
+
 
 
 
 /* กล่องหลัก */
 
+
 .container{
 
-    position:relative;
+    width:85%;
 
-    z-index:5;
+    max-width:1000px;
 
-    width:90%;
+    margin:auto;
 
-    max-width:900px;
+    background:rgba(255,255,255,0.88);
 
-    background:rgba(255,255,255,0.45);
+    padding:40px;
 
-    backdrop-filter:blur(10px);
+    border-radius:30px;
 
-    border-radius:35px;
-
-    padding:45px;
-
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 
 }
+
+
 
 
 
@@ -129,32 +178,25 @@ h1{
 
     text-align:center;
 
+    color:#2563eb;
+
     font-size:40px;
 
-    color:#075985;
-
-    margin-bottom:35px;
+    margin-bottom:40px;
 
 }
 
-
-h1 span{
-
-    color:#eab308;
-
-}
 
 
 
 /* Timeline */
 
+
 .timeline{
 
-    position:relative;
-
-    margin-left:30px;
-
     border-left:5px solid #facc15;
+
+    padding-left:30px;
 
 }
 
@@ -162,19 +204,27 @@ h1 span{
 
 .box{
 
-    background:white;
+    background:#eff6ff;
 
-    margin:25px 0;
-
-    padding:20px;
+    padding:25px;
 
     border-radius:20px;
 
+    margin-bottom:30px;
+
     position:relative;
 
-    margin-left:35px;
+    transition:0.3s;
 
-    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+
+.box:hover{
+
+    transform:translateX(10px);
+
+    background:#dbeafe;
 
 }
 
@@ -184,38 +234,40 @@ h1 span{
 
     content:"";
 
-    position:absolute;
+    width:20px;
 
-    width:25px;
+    height:20px;
 
-    height:25px;
-
-    background:#facc15;
+    background:#2563eb;
 
     border-radius:50%;
 
-    left:-50px;
+    position:absolute;
 
-    top:25px;
+    left:-43px;
 
-    border:5px solid white;
+    top:30px;
 
 }
 
 
 
-.box h2{
 
-    color:#0369a1;
+h2{
+
+    color:#eab308;
 
     margin-bottom:10px;
 
 }
 
 
-.box p{
 
-    color:#164e63;
+p{
+
+    color:#334155;
+
+    line-height:1.8;
 
     font-size:17px;
 
@@ -223,114 +275,60 @@ h1 span{
 
 
 
-/* Skills */
+.grade{
 
-.skills{
+    display:inline-block;
 
-    margin-top:30px;
+    margin-top:10px;
 
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:15px;
-
-}
-
-
-.skill{
-
-    background:#facc15;
-
-    color:#075985;
-
-    padding:10px 20px;
-
-    border-radius:25px;
-
-    font-weight:bold;
-
-}
-
-
-
-.back{
-
-    display:block;
-
-    width:160px;
-
-    margin:30px auto 0;
-
-    padding:12px;
-
-    text-align:center;
-
-    text-decoration:none;
-
-    background:#facc15;
-
-    color:#075985;
-
-    border-radius:30px;
-
-    font-weight:bold;
-
-}
-
-
-.back:hover{
-
-    background:#fde047;
-
-}
-
-
-/* ดาว */
-
-.star{
-
-    position:absolute;
+    background:#2563eb;
 
     color:white;
 
-    font-size:30px;
+    padding:8px 20px;
+
+    border-radius:20px;
 
 }
 
 
-.star1{
-    top:20%;
-    left:15%;
-}
-
-
-.star2{
-    bottom:20%;
-    right:20%;
-}
 
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
-<div class="sun"></div>
+<!-- ลูกโป่ง -->
 
-<div class="cloud cloud1"></div>
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
 
-<div class="cloud cloud2"></div>
 
 
-<div class="star star1">⭐</div>
 
-<div class="star star2">✨</div>
+<!-- Menu -->
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="personal.html">Personal</a>
+
+<a href="education.html">Education</a>
+
+<a href="activity.html">Activity</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
 
 
 
@@ -338,91 +336,105 @@ h1 span{
 
 
 <h1>
-Education <span>ประวัติการศึกษา</span>
+🎓 Education
 </h1>
+
 
 
 
 <div class="timeline">
 
 
-<div class="box">
-
-<h2>📘 ระดับประถมศึกษา</h2>
-
-<p>
-ปีการศึกษา : 2558 - 2563<br>
-โรงเรียน :  โรงเรีบนวัดเซิดสำราญ(บ้านเซิดวิทยาคาร)<br>
-รายละเอียด : ศึกษาระดับประถมศึกษา
-</p>
-
-</div>
-
-
 
 <div class="box">
 
-<h2>📗 ระดับมัธยมศึกษาตอนต้น</h2>
 
-<p>
-ปีการศึกษา : 2564 - 2567<br>
-โรงเรียน : พานทองต้นสน<br>
-รายละเอียด : ศึกษาระดับมัธยมศึกษาตอนต้น
-</p>
-
-</div>
-
-
-
-
-<div class="box">
-
-<h2>📙 ระดับมัธยมศึกษาตอนปลาย</h2>
-
-<p>
-ปีการศึกษา : 2569 - ปัจจุบัน<br>
-โรงเรียน : พานทอง<br>
-ระดับชั้น : มัธยมศึกษาปีที่ 6
-</p>
-
-</div>
-
-
-
-</div>
-
-
-
-<h2 style="text-align:center;color:#075985;margin-top:25px;">
-💻 Skills
+<h2>
+ระดับประถมศึกษา
 </h2>
 
 
-<div class="skills">
+<p>
+โรงเรียน โรงเรีบนวัดเซิดสำราญ
+</p>
 
-<div class="skill">กระบวนการวิทย์</div>
 
-<div class="skill">คำนวณเเละสถิติ</div>
+<p>
+ปีการศึกษา: 2558 - 2563
+</p>
 
-<div class="skill">บวก ลบ คูณ หาร</div>
 
-<div class="skill">การสื่อสาร</div>
-
-<div class="skill">GitHub</div>
 
 </div>
 
 
 
-<a href="personal.html" class="back">
-← Personal
-</a>
+
+
+<div class="box">
+
+
+<h2>
+ระดับมัธยมศึกษาตอนต้น
+</h2>
+
+
+<p>
+โรงเรียน พานทองต้นสน
+</p>
+
+<p>
+ปีการศึกษา: 2564 - 2567
+</p>
+
 
 
 </div>
 
+
+
+
+
+
+
+<div class="box">
+
+
+<h2>
+ระดับมัธยมศึกษาตอนปลาย
+</h2>
+
+
+<p>
+โรงเรียน พานทองต้นสน
+</p>
+
+
+<p>
+แผนการเรียน:
+วิทยาศาสตร์-คณิตศาสตร์ / เทคโนโลยี
+</p>
+
+
+<span class="grade">
+GPAX : 3.83
+</span>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
 
 
 </body>
+
 </html>
 ```
